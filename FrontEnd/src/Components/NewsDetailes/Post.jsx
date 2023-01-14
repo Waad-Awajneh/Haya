@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Comments from "./Comments";
+
 
 function Post({ articleDetail, recentArticles }) {
   return (
@@ -33,7 +33,7 @@ function Post({ articleDetail, recentArticles }) {
                   <p>{articleDetail.summary}</p>
                 </div>
 
-                {/* <Comments comments={articleDetail.comments} /> */}
+             
               </div>
             </div>
 

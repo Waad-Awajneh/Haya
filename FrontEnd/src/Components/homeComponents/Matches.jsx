@@ -36,9 +36,11 @@ const Matches = () => {
     dispatch(Leagues());
   }, [currentCountryId]);
   const allLeagues = useSelector((state) => state.matches.leagues);
-  const filterdLeagues = allLeagues.filter(
+  let filterdLeagues;
+if (allLeagues.length >0){
+   filterdLeagues = allLeagues?.filter(
     (e) => e.country_id == currentCountryId
-  );
+  )}
   //=============================================================================================================================
 
   // matches details ==========================================================================================
@@ -67,7 +69,7 @@ const Matches = () => {
 
   let currentDate = `${nowYear}-${nowMonth}-${nowDay}`;
   let previousMonth = `${nowYear}-${nowMonth - 2}-${nowDay}`;
-  console.log(previousMonth);
+  // console.log(previousMonth);
 
   // send the dat to the async fucniton as an object with the leauge id from the state
   const myObject = {
@@ -101,9 +103,10 @@ const Matches = () => {
 
   //make new thunk and fetch the new api to get the previous matches for all leagues      and  new state
 
-  if (Countries.length == 0) {
+  if ( Countries.length == 0) {
     return <Spinner />;
   }
+
   return (
     <>
       <section
@@ -142,7 +145,8 @@ const Matches = () => {
                     dispatch(saveChange(element.target.value))
                   }
                 />
-                {allCountries.slice(2, 12)?.map((element) => {
+              
+                {allCountries.length && allCountries?.slice(2, 12)?.map((element) => {
                   return (
                     <div className="search">
                       <p onClick={() => changeIdState(element.country_id)}>
@@ -168,7 +172,7 @@ const Matches = () => {
                 onChange={handeLOnChange}
               >
                 <option>--Select a league--</option>
-                {filterdLeagues.map((league) => {
+                {filterdLeagues?.map((league) => {
                   return (
                     <option value={league.league_id} onClick={myFunction}>
                       {league.league_name}

@@ -9,7 +9,6 @@ import {
   MDBNavbarItem,
   MDBNavbarLink,
   MDBCollapse,
-  MDBBadge,
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,

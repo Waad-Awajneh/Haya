@@ -7,11 +7,9 @@ import { NewsDetailes } from "./Components/NewsDetailes/NewsDetailes";
 import { Home } from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Header from "./Components/generalComponents/Header";
+
 import Footer from "./Components/generalComponents/Footer";
-// import { NewsDetailed } from "./pages/NewsDetailes";
-import Result from "./pages/Result";
-import { TeamAbout } from "./pages/TeamAbout";
+
 import { useJquery } from "./hooks/useJquery";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./pages/Profile";
@@ -21,7 +19,7 @@ import { AllPosts } from "./pages/AllPosts";
 
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
-import Post from "./Components/NewsDetailes/Post";
+
 import NavBar from "./Components/generalComponents/NavBar";
 
 function App() {
@@ -32,9 +30,7 @@ function App() {
   });
   return (
     <>
-      {/* <TeamAbout />*/}
       <BrowserRouter>
-        {/* <Header /> */}
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -49,10 +45,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-        {/* <Post /> */}
       </BrowserRouter>
-
-      {/* {"admin dashboard profile login register about " } */}
     </>
   );
 }

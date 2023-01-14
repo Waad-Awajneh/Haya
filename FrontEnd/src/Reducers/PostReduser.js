@@ -7,7 +7,7 @@ const allPosts = "http://localhost:8000/api/allPosts";
 
 export const getPosts = createAsyncThunk("posts/getPosts", async () => {
   const response = await axios.get(allPosts);
-  console.log(response);
+
   return response.data.data.sort(
     (dateA, dateB) =>
       new Date(dateB.published_date) - new Date(dateA.published_date)

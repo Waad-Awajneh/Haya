@@ -8,7 +8,7 @@ import {
   MDBCardBody,
   MDBInput,
 } from "mdb-react-ui-kit";
-import { ImGoogle } from "react-icons/im";
+
 import LoginGoogle from "../Components/Google/login";
 
 

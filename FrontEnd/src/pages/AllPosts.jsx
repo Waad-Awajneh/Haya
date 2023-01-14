@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+
 import { useJquery } from "../hooks/useJquery";
 import { getPosts } from "../Reducers/PostReduser";
 import PostINAll from "./PostINAll";

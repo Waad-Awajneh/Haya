@@ -43,7 +43,7 @@ const Videos = () => {
           <div className="row">
             <div className="video-slider owl-carousel">
               {videos.map((ele) => {
-                console.log(ele.snippet.title);
+                console.log(ele.snippet.thumbnails.high.url);
                 return (
                   <div className="px-3" key={ele.id}>
                     <div

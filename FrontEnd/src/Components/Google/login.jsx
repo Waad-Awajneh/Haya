@@ -2,9 +2,8 @@ import { React, useEffect, useState } from "react";
 import { gapi } from "gapi-script";
 import { useNavigate } from "react-router";
 import { GoogleLogin } from "react-google-login";
-// refresh token
-// import { refreshTokenSetup } from '../utils/refreshToken';
-import { refreshTokenSetup } from "./refreshToken";
+
+
 import axios from "axios";
 import { useSignIn } from "react-auth-kit";
 
@@ -57,7 +56,7 @@ function LoginGoogle() {
           authState: {
             user: res.data.data.user,
             token: res.data.data.token,
-            role: res.data.data.user.role,
+            // role: res.data.data.user.role,
           },
         })
       ) {

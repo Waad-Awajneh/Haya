@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useJquery } from "../hooks/useJquery";
 import { useSelector, useDispatch } from "react-redux";
 import { getPosts } from "../Reducers/PostReduser";
-import { getArticles, getRandomArticles } from "../Reducers/ArticleReducer";
+import { getArticles } from "../Reducers/ArticleReducer";
 import $ from "jquery";
 function Blog(props) {
   const { reloadJquery } = useJquery();
@@ -76,25 +76,7 @@ function Blog(props) {
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-lg-7 left-blog-pad">
-              {/* <div
-                className="large-blog"
-                style={{ backgroundImage: `url(${articles[0].media})` }}
-              >
-                {console.log(articles[0]?.title)}
-                <div className="bi-text">
-                  <h3>
-                    <Link to={`/NewsDetailes/${articles[0].article_id}`}>
-                      {articles[0]?.title}
-                    </Link>
-                  </h3>
-                  <ul>
-                    <li>
-                      <i className="fa fa-calendar" />
-                      {articles[0].published_date}
-                    </li>
-                  </ul>
-                </div>
-             </div>*/}
+      
               <div className="blog-items">
                 {articles.slice(1, 5).map((article) => {
                   return (
@@ -129,14 +111,7 @@ function Blog(props) {
                   );
                 })}
               </div>
-              {/* <div className="more-blog">
-                <a href="#">
-                  <i className="fa fa-long-arrow-left" /> Older post
-                </a>
-                <a href="#">
-                  Newer post <i className="fa fa-long-arrow-right" />
-                </a>
-              </div> */}
+    
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="blog-sidebar">
