@@ -101,7 +101,7 @@ function AllExpectation() {
         <Row>
           <Col md="12">
             <Button variant="success" className={"mb-3"} onClick={toggleShow1}>
-              Add New Article
+              Add New Expectation
             </Button>
             <Card className="strpied-tabled-with-hover">
               <Card.Header>
@@ -185,7 +185,6 @@ function AllExpectation() {
         add={add}
         setAdd={setAdd}
       />
-
     </>
   );
 }

@@ -16,6 +16,7 @@ import {
   Tooltip,
 } from "react-bootstrap";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   const [counts, setCounts] = useState("");
@@ -49,10 +50,12 @@ function Dashboard() {
               </Card.Body>
               <Card.Footer>
                 <hr></hr>
-                <div className="stats">
-                  <i className="nc-icon nc-paper-02 mr-1"></i>
-                  Total Posts
-                </div>
+                <Link to={"table"}>
+                  <div className="stats">
+                    <i className="nc-icon nc-paper-02 mr-1"></i>
+                    Total Users
+                  </div>
+                </Link>
               </Card.Footer>
             </Card>
           </Col>
@@ -75,10 +78,12 @@ function Dashboard() {
               </Card.Body>
               <Card.Footer>
                 <hr></hr>
-                <div className="stats">
-                  <i className="far fa-calendar-alt mr-1"></i>
-                  Total news
-                </div>
+                <Link to={"news"}>
+                  <div className="stats">
+                    <i className="far fa-calendar-alt mr-1"></i>
+                    Total news
+                  </div>
+                </Link>
               </Card.Footer>
             </Card>
           </Col>
@@ -101,10 +106,12 @@ function Dashboard() {
               </Card.Body>
               <Card.Footer>
                 <hr></hr>
-                <div className="stats">
-                  <i className="far fa-clock-o mr-1"></i>
-                  In the last hour
-                </div>
+                <Link to={"allposts"}>
+                  <div className="stats">
+                    <i className="far fa-clock-o mr-1"></i>
+                    Total Posts
+                  </div>
+                </Link>
               </Card.Footer>
             </Card>
           </Col>
@@ -127,10 +134,12 @@ function Dashboard() {
               </Card.Body>
               <Card.Footer>
                 <hr></hr>
-                <div className="stats">
-                  <i className="fas fa-redo mr-1"></i>
-                  Update now
-                </div>
+                <Link to={"comments"}>
+                  <div className="stats">
+                    <i className="fas fa-redo mr-1"></i>
+                    Total Comments
+                  </div>
+                </Link>
               </Card.Footer>
             </Card>
           </Col>
@@ -158,10 +167,12 @@ text-primary"
               </Card.Body>
               <Card.Footer>
                 <hr></hr>
-                <div className="stats">
-                  <i className="fas fa-redo mr-1"></i>
-                  Update now
-                </div>
+                <Link to={"expectation"}>
+                  <div className="stats">
+                    <i className="fas fa-redo mr-1"></i>
+                    Total Expectations
+                  </div>
+                </Link>
               </Card.Footer>
             </Card>
           </Col>

@@ -8,15 +8,11 @@ import {
   MDBModalTitle,
   MDBModalBody,
   MDBModalFooter,
-  MDBCardImage,
-  MDBTextArea,
   MDBInput,
 } from "mdb-react-ui-kit";
 
 import axios from "axios";
 import Swal from "sweetalert2";
-
-// const qs = require("qs");
 
 export default function AddExpectation({
   basicModal,
@@ -84,7 +80,7 @@ export default function AddExpectation({
         <MDBModalDialog size="lg">
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>Edit expectation </MDBModalTitle>
+              <MDBModalTitle>Add expectation </MDBModalTitle>
               <MDBBtn
                 className="btn-close"
                 color="none"
@@ -108,6 +104,7 @@ export default function AddExpectation({
                 </div>
                 <div className="col-6 my-3">
                   <MDBInput
+                    label="First Team-Logo"
                     name="team_1_picture"
                     rows={6}
                     type="text"
